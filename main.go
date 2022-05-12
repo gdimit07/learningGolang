@@ -8,10 +8,6 @@ import "fmt"
 
 func main() {
 
-	mysliuce := []string{"hello"}
-
-	fmt.Println(mysliuce)
-
 	//cards := []string{newCard(), newCard(), "Ace of Diamonds"}
 	//cards := deck{newCard(), "Ace of Diamonds"}
 	//cards = append(cards, "Six of hearts")
@@ -21,6 +17,13 @@ func main() {
 	// }
 
 	cards := newDeck()
-	cards.print()
+
+	hand, remainingCards := deal(cards, 5)
+
+	hand.print()
+
+	remainingCards.print()
+
+	fmt.Println(cards.toString())
 
 }
