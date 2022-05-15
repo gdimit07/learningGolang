@@ -53,6 +53,6 @@ func main() {
 	}
 
 	//fmt.Printf("\n%+v", jim)
-	jim.updateFirstName("Jimmy")
+	//jim.updateFirstName("Jimmy")
 	jim.print()
 }
