@@ -25,9 +25,9 @@ func (p personWithContactInfo) print() {
 	fmt.Printf("\n%+v", p)
 }
 
-func (p personWithContactInfo) updateFirstName(newFirstName string) {
+func (p *personWithContactInfo) updateFirstName(newFirstName string) {
 
-	p.firstName = newFirstName
+	(*p).firstName = newFirstName
 }
 
 func main() {
@@ -52,7 +52,8 @@ func main() {
 		},
 	}
 
-	//fmt.Printf("\n%+v", jim)
-	//jim.updateFirstName("Jimmy")
+	//pointerToJim := &jim
+	//pointerToJim.updateFirstName("Jimmy")
+	jim.updateFirstName("Jimmy") //pointer shortcut
 	jim.print()
 }

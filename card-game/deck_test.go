@@ -34,7 +34,7 @@ func TestNewDeckAndNewDeckFromFile(t *testing.T) {
 
 	loadedDeck := newDeckFromFile("_decktesting")
 
-	if len(loadedDeck) != 520 {
+	if len(loadedDeck) != 52 {
 		t.Errorf("Expected 52 cards but got %v", len(loadedDeck))
 	}
 
